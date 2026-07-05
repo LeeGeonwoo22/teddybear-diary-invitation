@@ -30,6 +30,23 @@
   font-display: swap;
 }
 
+/* 손글씨 (앱과 동일) — 영어: Caveat, 한국어: Gaegu */
+@font-face {
+  font-family: "Caveat";
+  src: url("assets/fonts/Caveat-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gaegu";
+  src: url("assets/fonts/Gaegu-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --paper: #fbf7ee;
   --paper-deep: #f4ead6;
@@ -371,18 +388,31 @@ blockquote {
 blockquote p {
   margin: 0;
   color: var(--accent-dark);
-  font-size: clamp(23px, 3.2vw, 34px);
-  font-style: italic;
-  line-height: 1.48;
+  font-family: "Caveat", "Gaegu", cursive;
+  font-size: clamp(30px, 4vw, 44px);
+  font-style: normal;
+  line-height: 1.35;
+}
+
+/* 한국어: 손글씨 Gaegu + 크기 축소(영문 대비 작게) */
+html[lang="ko"] blockquote p {
+  font-family: "Gaegu", cursive;
+  font-size: clamp(21px, 2.8vw, 29px);
+  line-height: 1.6;
 }
 
 blockquote cite {
   display: block;
-  margin-top: 15px;
+  margin-top: 16px;
   color: var(--muted);
-  font-family: "Pretendard", Arial, sans-serif;
-  font-size: 14px;
+  font-family: "Caveat", "Gaegu", cursive;
+  font-size: 21px;
   font-style: normal;
+}
+
+html[lang="ko"] blockquote cite {
+  font-family: "Gaegu", cursive;
+  font-size: 18px;
 }
 
 .story-close {
