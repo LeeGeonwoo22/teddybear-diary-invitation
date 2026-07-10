@@ -286,6 +286,18 @@ h3 {
   transform: translateY(-1px);
 }
 
+.button-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.button-outline:hover {
+  background: var(--paper-deep);
+  color: var(--accent-dark);
+}
+
 .hero-art {
   position: relative;
   margin: 0;
@@ -454,6 +466,61 @@ html[lang="ko"] blockquote cite {
 .small-note {
   color: var(--soft);
   font-size: 14px;
+}
+
+.beta-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 26px 0 20px;
+}
+
+.beta-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+}
+
+.beta-step-num {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.beta-step-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.beta-step-title {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.beta-step-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.beta-step .button {
+  align-self: flex-start;
+  margin-top: 4px;
 }
 
 .policies {
